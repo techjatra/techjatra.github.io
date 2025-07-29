@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechJatra - Your Journey to the Perfect Laptop</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light blue-gray background */
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header/Navigation Bar -->
+    <header class="bg-white shadow-md py-4 px-6 md:px-12 sticky top-0 z-50 rounded-b-lg">
+        <nav class="container mx-auto flex justify-between items-center">
+            <!-- Logo/Brand Name -->
+            <a href="#" class="text-3xl font-bold text-blue-700 flex items-center">
+                <svg class="w-8 h-8 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-5-5 1.41-1.41L11 14.17l7.59-7.59L20 8l-9 9z"/>
+                </svg>
+                TechJatra
+            </a>
+            <!-- Navigation Links (Hidden on small screens, shown on medium and up) -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Home</a>
+                <a href="#featured" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Laptops</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">About Us</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (Hamburger Icon) -->
+            <button id="mobile-menu-button" class="md:hidden p-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu (Initially hidden) -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+            <a href="#home" class="block py-2 px-4 text-gray-700 hover:bg-gray-100 rounded-md">Home</a>
+            <a href="#featured" class="block py-2 px-4 text-gray-700 hover:bg-gray-100 rounded-md">Laptops</a>
+            <a href="#about" class="block py-2 px-4 text-gray-700 hover:bg-gray-100 rounded-md">About Us</a>
+            <a href="#contact" class="block py-2 px-4 text-gray-700 hover:bg-gray-100 rounded-md">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 px-6 md:px-12 rounded-b-xl shadow-lg mb-12">
+            <div class="container mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">
+                    আপনার প্রযুক্তি যাত্রা শুরু হোক TechJatra-এর সাথে
+                </h1>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto opacity-90 animate-fade-in-up">
+                    সেরা পারফরম্যান্স, নির্ভরযোগ্যতা এবং সাশ্রয়ী মূল্যে নতুন ও ব্যবহৃত ল্যাপটপের বিশাল সংগ্রহ।
+                </p>
+                <a href="#featured" class="inline-block bg-white text-blue-700 hover:bg-gray-100 transition duration-300 px-8 py-4 rounded-full text-lg font-semibold shadow-lg transform hover:scale-105">
+                    আমাদের ল্যাপটপ দেখুন
+                </a>
+            </div>
+        </section>
+
+        <!-- Featured Laptops Section -->
+        <section id="featured" class="py-16 px-6 md:px-12 bg-white rounded-xl shadow-lg mx-4 md:mx-auto max-w-7xl mb-12">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">আমাদের সেরা ল্যাপটপগুলো</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Laptop Card 1 -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-transform transform hover:-translate-y-2 duration-300 border border-gray-200">
+                        <img src="https://placehold.co/400x250/e0e7ff/3b82f6?text=Gaming+Laptop" alt="Gaming Laptop" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">গেমিং ল্যাপটপ: আল্টিমেট পারফরম্যান্স</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            শক্তিশালী প্রসেসর, ডেডিকেটেড গ্রাফিক্স কার্ড এবং হাই রিফ্রেশ রেট ডিসপ্লে সহ সেরা গেমিং অভিজ্ঞতা।
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-700">৳ 85,000</span>
+                            <button class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition duration-300 shadow-md">
+                                বিস্তারিত দেখুন
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Laptop Card 2 -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-transform transform hover:-translate-y-2 duration-300 border border-gray-200">
+                        <img src="https://placehold.co/400x250/e0e7ff/3b82f6?text=Business+Laptop" alt="Business Laptop" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">বিজনেস ল্যাপটপ: প্রফেশনালদের জন্য</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            পাতলা ডিজাইন, দীর্ঘ ব্যাটারি লাইফ এবং উন্নত নিরাপত্তা ফিচার সহ অফিসের কাজের জন্য আদর্শ।
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-700">৳ 62,000</span>
+                            <button class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition duration-300 shadow-md">
+                                বিস্তারিত দেখুন
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Laptop Card 3 -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-transform transform hover:-translate-y-2 duration-300 border border-gray-200">
+                        <img src="https://placehold.co/400x250/e0e7ff/3b82f6?text=Student+Laptop" alt="Student Laptop" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">স্টুডেন্ট ল্যাপটপ: পড়াশোনার সঙ্গী</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            হালকা ওজন, পোর্টেবল এবং দৈনন্দিন কাজের জন্য যথেষ্ট শক্তিশালী, ছাত্রছাত্রীদের জন্য সেরা।
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-700">৳ 45,000</span>
+                            <button class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition duration-300 shadow-md">
+                                বিস্তারিত দেখুন
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="about" class="py-16 px-6 md:px-12 bg-blue-50 rounded-xl shadow-lg mx-4 md:mx-auto max-w-7xl mb-12">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold text-gray-900 mb-12">কেন TechJatra বেছে নেবেন?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-blue-100 hover:shadow-lg transition duration-300">
+                        <div class="text-blue-600 mb-4 text-5xl">
+                            <svg class="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-5-5 1.41-1.41L11 14.17l7.59-7.59L20 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">বিশ্বস্ততা ও গুণগত মান</h3>
+                        <p class="text-gray-600">আমরা শুধুমাত্র সেরা মানের ল্যাপটপ সরবরাহ করি, যা আপনার দীর্ঘদিনের সঙ্গী হবে।</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-blue-100 hover:shadow-lg transition duration-300">
+                        <div class="text-blue-600 mb-4 text-5xl">
+                            <svg class="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">সেরা গ্রাহক সেবা</h3>
+                        <p class="text-gray-600">আপনার প্রতিটি প্রশ্নের দ্রুত এবং সঠিক উত্তর দিতে আমরা প্রতিশ্রুতিবদ্ধ।</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-blue-100 hover:shadow-lg transition duration-300">
+                        <div class="text-blue-600 mb-4 text-5xl">
+                            <svg class="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-5-5 1.41-1.41L11 14.17l7.59-7.59L20 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">দ্রুত ডেলিভারি</h3>
+                        <p class="text-gray-600">নিরাপদ এবং দ্রুত ডেলিভারি নিশ্চিত করি আপনার দোরগোড়ায়।</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-16 px-6 md:px-12 bg-white rounded-xl shadow-lg mx-4 md:mx-auto max-w-7xl mb-12">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold text-gray-900 mb-12">আমাদের গ্রাহকরা যা বলছেন</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-blue-50 p-6 rounded-xl shadow-md border border-blue-100">
+                        <p class="text-gray-700 italic mb-4">"TechJatra থেকে ল্যাপটপ কিনে আমি খুবই সন্তুষ্ট। তাদের সার্ভিস এবং পণ্যের মান দুটোই অসাধারণ!"</p>
+                        <p class="font-semibold text-blue-700">- শামীম আহমেদ, ঢাকা</p>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="bg-blue-50 p-6 rounded-xl shadow-md border border-blue-100">
+                        <p class="text-gray-700 italic mb-4">"এত দ্রুত ডেলিভারি এবং এত ভালো মানের ল্যাপটপ পাবো ভাবিনি। TechJatra-কে ধন্যবাদ!"</p>
+                        <p class="font-semibold text-blue-700">- ফারিহা ইসলাম, চট্টগ্রাম</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 px-6 md:px-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl shadow-lg mx-4 md:mx-auto max-w-7xl mb-12">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-8">আমাদের সাথে যোগাযোগ করুন</h2>
+                <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">
+                    আপনার ল্যাপটপের প্রয়োজন সম্পর্কে আমাদের জানান। আমরা আপনার জন্য সেরা সমাধান খুঁজে দিতে প্রস্তুত।
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                    <a href="https://m.me/yourfacebookpage" target="_blank" class="bg-white text-blue-700 hover:bg-gray-100 transition duration-300 px-8 py-4 rounded-full text-lg font-semibold shadow-lg transform hover:scale-105 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V19h-2v-2h2v-4h-2V9h2V7h2v2h2v2h-2v4h2v2h-2v2h2c4.48-1.04 8-5.07 8-9.8zM12 4c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6 2.69-6 6-6z"/>
+                        </svg>
+                        ফেসবুক মেসেজ পাঠান
+                    </a>
+                    <a href="tel:+8801XXXXXXXXX" class="bg-white text-blue-700 hover:bg-gray-100 transition duration-300 px-8 py-4 rounded-full text-lg font-semibold shadow-lg transform hover:scale-105 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.57.11.35.03.74-.25 1.02L6.62 10.79z"/>
+                        </svg>
+                        কল করুন: +8801XXXXXXXXX
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-6 md:px-12 rounded-t-lg">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 TechJatra. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu after clicking a link
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
